@@ -1,23 +1,22 @@
-abstract class Hero {
-    public String name;
-    public int health;
+public class Main {
+    public static void main(String[] args) {
+      
+        Hero player = new Warrior("Arthur");
+        Hero enemy = new Archer("Robin");
 
-    public Hero(String name, int health) {
-        this.name = name;
-        this.health = health;
-    }
+       
+        GameStats sessionStats = new GameStats();
+        Inventory backpack = new Inventory();
 
-    
-    public abstract void attack();
+       
+        Dungeon level1 = new Dungeon();
+        BattleController engine = new BattleController();
 
-}
-class Warrior extends Hero {
-    public Warrior(String name) {
-        super(name, 120); 
-    }
-
-    @Override
-    public void attack() {
-        System.out.println(name + " swings a heavy Iron Sword!");
+       
+        engine.conductBattle(player, enemy, level1);
+        backpack.useItem(player, "Health Potion");
+        sessionStats.gainXP(150);
+        
+        System.out.println(player.name + " is now Level: " + sessionStats.getLevel());
     }
 }
