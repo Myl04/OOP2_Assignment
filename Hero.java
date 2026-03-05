@@ -35,4 +35,3 @@ class Archer extends Hero {
         System.out.println(name + " fires a Longbow arrow!");
     }
 }
-
