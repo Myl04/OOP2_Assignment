@@ -1,0 +1,19 @@
+public class GameStats {
+    private int exp = 0;
+
+    public void gainXP(int amount) {
+        if(amount > 0){
+            this.exp += amount;
+        }
+    }
+
+    public int getLevel() {
+        return (exp / 100) + 1; 
+    }
+
+    public int getExp() {
+        return exp;
+    }
+
+
+}
