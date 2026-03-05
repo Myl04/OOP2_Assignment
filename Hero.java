@@ -43,7 +43,7 @@ class Paladin extends Hero {
 
     @Override
     public void attack() {
-        System.out.println(name + " strikes with lightning padol!");
+        System.out.println(name + " strikes with lightning padoll!");
     }
     
 }
