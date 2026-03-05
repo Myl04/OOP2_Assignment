@@ -1,4 +1,3 @@
-
 abstract class Hero {
     public String name;
     public int health;
