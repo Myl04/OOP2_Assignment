@@ -34,3 +34,15 @@ class Archer extends Hero {
         System.out.println(name + " fires a Longbow arrow!");
     }
 }
+
+class Paladin extends Hero {
+    public Paladin(String name) {
+        super(name, 100); 
+    }
+
+    @Override
+    public void attack() {
+        System.out.println(name + " strikes with lightning padol!");
+    }
+    
+}
